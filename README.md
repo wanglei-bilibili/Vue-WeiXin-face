@@ -1,34 +1,11 @@
-# Vueface
+年底了没事干，把以前做过的项目中的组件拿出来再复习一下， 先说说思路吧。
+注意：
+1. 项目是用vue-cli3.0搭建起来的项目， 参考cli3.0官网地址
 
-## Project setup
-```
-npm install
-```
+2.样式是用scss需要安装依赖： npm install node-sass sass-loader -D
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+思路： 
+  页面内容总体分为三块区域（内容区，表情区，输入区），引入JSON文件表情库渲染到页面，给每个表情绑定点击事件并传递下标，将用户点击过的表情存放到一个数组中，赋值给input标签的value中让其显示先输入框内，然后给 确定 按钮绑定点击事件，用户点击确定按钮将input中的value值赋值给内容区（内容去也要创建一个数组）让其渲染到你要的位置上，这样就完成了表情的渲染和发送。
 
-### Compiles and minifies for production
-```
-npm run build
-```
+详细介绍的可以去我的CSDN中查看：https://blog.csdn.net/qq_37141008/article/details/86528345
 
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Run your unit tests
-```
-npm run test:unit
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
